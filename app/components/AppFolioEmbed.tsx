@@ -15,7 +15,7 @@ type AppFolioEmbedProps = {
 export default function AppFolioEmbed({
   hostUrl = 'greyhillgroup.appfolio.com',
   propertyGroup = 'Marbella Bay Apartments',
-  themeColor = '#1b2e4a',
+  themeColor = '#C0503A',
   height = '500px',
   width = '100%',
   defaultOrder = 'date_posted',

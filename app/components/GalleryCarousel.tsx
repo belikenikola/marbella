@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useCallback, useEffect } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -11,17 +11,6 @@ interface GalleryCarouselProps {
 export default function GalleryCarousel({ images }: GalleryCarouselProps) {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
-
-  const scroll = (direction: 'left' | 'right') => {
-    if (scrollContainerRef.current) {
-      const scrollAmount = scrollContainerRef.current.offsetWidth * 0.8;
-      scrollContainerRef.current.scrollBy({
-        left: direction === 'left' ? -scrollAmount : scrollAmount,
-        behavior: 'smooth',
-      });
-    }
-  };
 
   const openLightbox = (index: number) => {
     setCurrentIndex(index);
@@ -82,76 +71,46 @@ export default function GalleryCarousel({ images }: GalleryCarouselProps) {
 
   return (
     <>
-      <div className="relative">
-        <button
-          onClick={() => scroll('left')}
-          className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white p-2 rounded-full shadow-lg transition-all"
-          aria-label="Scroll gallery left"
-        >
-          <svg
-            className="w-6 h-6 text-[var(--brand-navy)]"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            aria-hidden="true"
+      {/* Masonry Grid */}
+      <div className="masonry-grid" role="region" aria-label="Image gallery">
+        {images.map((image, index) => (
+          <button
+            key={index}
+            onClick={() => openLightbox(index)}
+            className="masonry-item cursor-pointer group block w-full"
+            aria-label={`View image ${index + 1} of ${images.length}`}
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M15 19l-7-7 7-7"
-            />
-          </svg>
-        </button>
-
-        <div
-          ref={scrollContainerRef}
-          className="flex gap-4 overflow-x-auto snap-x snap-mandatory no-scrollbar py-4"
-          role="region"
-          aria-label="Image gallery"
-        >
-          {images.map((image, index) => (
-            <button
-              key={index}
-              onClick={() => openLightbox(index)}
-              className="flex-shrink-0 w-full sm:w-2/3 md:w-1/2 lg:w-1/3 snap-start cursor-pointer group"
-              aria-label={`View image ${index + 1} of ${images.length}`}
-            >
-              <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
-                <Image
-                  src={image}
-                  alt={`Marbella Bay Apartments gallery image ${index + 1}`}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  sizes="(max-width: 640px) 100vw, (max-width: 768px) 66vw, (max-width: 1024px) 50vw, 33vw"
-                />
+            <div className="relative overflow-hidden rounded-xl">
+              <Image
+                src={image}
+                alt={`Marbella Bay Apartments gallery image ${index + 1}`}
+                width={600}
+                height={index % 3 === 0 ? 500 : index % 3 === 1 ? 400 : 350}
+                className="w-full h-auto object-cover group-hover:scale-[1.03] transition-transform duration-500"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              />
+              <div className="absolute inset-0 bg-brand-terracotta/0 group-hover:bg-brand-terracotta/20 transition-colors duration-300 flex items-center justify-center">
+                <svg
+                  className="w-10 h-10 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={1.5}
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
+                  />
+                </svg>
               </div>
-            </button>
-          ))}
-        </div>
-
-        <button
-          onClick={() => scroll('right')}
-          className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white p-2 rounded-full shadow-lg transition-all"
-          aria-label="Scroll gallery right"
-        >
-          <svg
-            className="w-6 h-6 text-[var(--brand-navy)]"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M9 5l7 7-7 7"
-            />
-          </svg>
-        </button>
+            </div>
+          </button>
+        ))}
       </div>
 
+      {/* Lightbox */}
       <AnimatePresence>
         {lightboxOpen && (
           <motion.div

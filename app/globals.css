@@ -1,36 +1,45 @@
 @import "tailwindcss";
 
 :root {
-  /* Marbella Bay Brand Colors - warm coastal palette */
-  --brand-navy: #1b2e4a;
-  --brand-sand: #c9a96e;
-  --brand-sand-light: #d4bc8e;
-  --brand-sand-dark: #b08d4f;
-  --brand-gray-light: #f7f5f2;
-  --brand-gray: #6b7280;
+  /* Marbella Bay Brand Colors - Tropical Spanish Mediterranean */
+  --brand-terracotta: #C0503A;
+  --brand-terracotta-dark: #A33E2A;
+  --brand-turquoise: #2A9D8F;
+  --brand-turquoise-light: #3DBDAE;
+  --brand-saffron: #E9A84C;
+  --brand-saffron-dark: #D4942E;
+  --brand-sienna-dark: #2C1A0E;
+  --brand-limewash: #F5EFE4;
+  --brand-cream: #FAF5EC;
+  --brand-gray: #7A6E65;
   --brand-white: #ffffff;
-  --brand-warm-white: #fdfbf7;
 
   /* Semantic Colors */
-  --background: #ffffff;
-  --foreground: #1b2e4a;
-  --text-primary: #1b2e4a;
-  --text-secondary: #6b7280;
-  --accent: #c9a96e;
-  --accent-hover: #b08d4f;
+  --background: #FAF5EC;
+  --foreground: #2C1A0E;
+  --text-primary: #2C1A0E;
+  --text-secondary: #7A6E65;
+  --accent: #C0503A;
+  --accent-hover: #A33E2A;
+  --accent-secondary: #2A9D8F;
+  --accent-warm: #E9A84C;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-brand-navy: var(--brand-navy);
-  --color-brand-sand: var(--brand-sand);
-  --color-brand-sand-light: var(--brand-sand-light);
-  --color-brand-sand-dark: var(--brand-sand-dark);
-  --color-brand-gray-light: var(--brand-gray-light);
+  --color-brand-terracotta: var(--brand-terracotta);
+  --color-brand-terracotta-dark: var(--brand-terracotta-dark);
+  --color-brand-turquoise: var(--brand-turquoise);
+  --color-brand-turquoise-light: var(--brand-turquoise-light);
+  --color-brand-saffron: var(--brand-saffron);
+  --color-brand-saffron-dark: var(--brand-saffron-dark);
+  --color-brand-sienna-dark: var(--brand-sienna-dark);
+  --color-brand-limewash: var(--brand-limewash);
+  --color-brand-cream: var(--brand-cream);
   --color-brand-gray: var(--brand-gray);
-  --color-brand-warm-white: var(--brand-warm-white);
-  --font-sans: var(--font-poppins);
+  --font-sans: var(--font-dm-sans);
+  --font-display: var(--font-playfair);
 }
 
 html {
@@ -40,18 +49,17 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-poppins), Arial, Helvetica, sans-serif;
+  font-family: var(--font-dm-sans), Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-playfair), Georgia, serif;
 }
 
 /* Hero Section Styles */
 .hero-title {
-  letter-spacing: 0.05em;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-}
-
-.hero-subtitle-spread {
-  letter-spacing: 0.35em;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.02em;
+  text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.6);
 }
 
 /* Text Shadow Utilities */
@@ -67,6 +75,49 @@ body {
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
 }
 
+/* Arch shape utility */
+.arch-top {
+  border-radius: 50% 50% 0 0 / 30% 30% 0 0;
+}
+
+/* Decorative tile pattern background */
+.tile-pattern-bg {
+  background-image: repeating-conic-gradient(
+    var(--brand-terracotta) 0% 25%,
+    transparent 0% 50%
+  );
+  background-size: 20px 20px;
+  opacity: 0.04;
+}
+
+/* Diagonal section cuts */
+.diagonal-top {
+  clip-path: polygon(0 8%, 100% 0, 100% 100%, 0 100%);
+}
+
+/* Masonry gallery */
+.masonry-grid {
+  columns: 3;
+  column-gap: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .masonry-grid {
+    columns: 2;
+  }
+}
+
+@media (max-width: 640px) {
+  .masonry-grid {
+    columns: 1;
+  }
+}
+
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 1rem;
+}
+
 /* Hide scrollbar for carousel */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
@@ -77,28 +128,13 @@ body {
   scrollbar-width: none;
 }
 
-/* Decorative line accent */
-.accent-line {
-  width: 60px;
-  height: 3px;
-  background: var(--brand-sand);
-}
-
-.accent-line-center {
-  width: 60px;
-  height: 3px;
-  background: var(--brand-sand);
-  margin-left: auto;
-  margin-right: auto;
-}
-
 /* Focus styles for accessibility */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 textarea:focus-visible,
 select:focus-visible {
-  outline: 3px solid var(--brand-sand);
+  outline: 3px solid var(--brand-saffron);
   outline-offset: 2px;
 }
 
@@ -107,7 +143,7 @@ select:focus-visible {
   position: absolute;
   top: -40px;
   left: 0;
-  background: var(--brand-navy);
+  background: var(--brand-sienna-dark);
   color: white;
   padding: 8px 16px;
   z-index: 100;

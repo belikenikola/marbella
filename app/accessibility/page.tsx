@@ -11,18 +11,17 @@ export default function AccessibilityPage() {
   return (
     <>
       {/* Header */}
-      <header className="bg-[var(--brand-navy)] py-4" role="banner">
+      <header className="bg-brand-sienna-dark py-4" role="banner">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center gap-2">
-              <span className="text-xl font-bold text-white">
-                Marbella{' '}
-                <span className="text-[var(--brand-sand)]">Bay</span>
+              <span className="text-xl font-bold text-white italic font-[family-name:var(--font-playfair)]">
+                Marbella Bay
               </span>
             </Link>
             <Link
               href="/"
-              className="text-white hover:text-[var(--brand-sand)] transition-colors"
+              className="text-white hover:text-brand-saffron transition-colors"
             >
               Back to Home
             </Link>
@@ -30,19 +29,19 @@ export default function AccessibilityPage() {
         </div>
       </header>
 
-      <main id="main-content" className="py-12 md:py-16 bg-white">
+      <main id="main-content" className="py-12 md:py-16 bg-brand-cream">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl md:text-4xl font-bold text-[var(--brand-navy)] mb-8">
+          <h1 className="text-3xl md:text-4xl font-bold text-brand-sienna-dark mb-8 font-[family-name:var(--font-playfair)]">
             Accessibility Statement
           </h1>
 
-          <p className="text-[var(--brand-gray)] mb-6">
+          <p className="text-brand-gray mb-6">
             <strong>Last Updated:</strong> February 2025
           </p>
 
-          <div className="prose prose-lg max-w-none text-[var(--brand-gray)]">
+          <div className="prose prose-lg max-w-none text-brand-gray">
             <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-[var(--brand-navy)] mb-4">
+              <h2 className="text-2xl font-semibold text-brand-sienna-dark mb-4 font-[family-name:var(--font-playfair)]">
                 Our Commitment to Accessibility
               </h2>
               <p className="mb-4">
@@ -59,7 +58,7 @@ export default function AccessibilityPage() {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-[var(--brand-navy)] mb-4">
+              <h2 className="text-2xl font-semibold text-brand-sienna-dark mb-4 font-[family-name:var(--font-playfair)]">
                 Conformance Status
               </h2>
               <p className="mb-4">
@@ -94,14 +93,14 @@ export default function AccessibilityPage() {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-[var(--brand-navy)] mb-4">
+              <h2 className="text-2xl font-semibold text-brand-sienna-dark mb-4 font-[family-name:var(--font-playfair)]">
                 Accessibility Features
               </h2>
               <p className="mb-4">
                 Our website includes the following accessibility features:
               </p>
 
-              <h3 className="text-xl font-medium text-[var(--brand-navy)] mb-3">
+              <h3 className="text-xl font-medium text-brand-sienna-dark mb-3">
                 Navigation
               </h3>
               <ul className="list-disc pl-6 mb-4 space-y-2">
@@ -112,7 +111,7 @@ export default function AccessibilityPage() {
                 <li>Logical tab order throughout the site</li>
               </ul>
 
-              <h3 className="text-xl font-medium text-[var(--brand-navy)] mb-3">
+              <h3 className="text-xl font-medium text-brand-sienna-dark mb-3">
                 Visual Design
               </h3>
               <ul className="list-disc pl-6 mb-4 space-y-2">
@@ -123,7 +122,7 @@ export default function AccessibilityPage() {
                 <li>Responsive design that works across device sizes</li>
               </ul>
 
-              <h3 className="text-xl font-medium text-[var(--brand-navy)] mb-3">
+              <h3 className="text-xl font-medium text-brand-sienna-dark mb-3">
                 Content
               </h3>
               <ul className="list-disc pl-6 mb-4 space-y-2">
@@ -134,20 +133,20 @@ export default function AccessibilityPage() {
                 <li>Error messages that clearly identify issues</li>
               </ul>
 
-              <h3 className="text-xl font-medium text-[var(--brand-navy)] mb-3">
+              <h3 className="text-xl font-medium text-brand-sienna-dark mb-3">
                 Interactive Elements
               </h3>
               <ul className="list-disc pl-6 mb-4 space-y-2">
                 <li>All functionality available via keyboard</li>
                 <li>ARIA landmarks and labels where appropriate</li>
-                <li>Gallery carousel with keyboard navigation</li>
+                <li>Gallery with keyboard navigation</li>
                 <li>Modal dialogs that trap focus appropriately</li>
                 <li>Reduced motion support for users who prefer it</li>
               </ul>
             </section>
 
             <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-[var(--brand-navy)] mb-4">
+              <h2 className="text-2xl font-semibold text-brand-sienna-dark mb-4 font-[family-name:var(--font-playfair)]">
                 Compatibility
               </h2>
               <p className="mb-4">
@@ -167,7 +166,7 @@ export default function AccessibilityPage() {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-[var(--brand-navy)] mb-4">
+              <h2 className="text-2xl font-semibold text-brand-sienna-dark mb-4 font-[family-name:var(--font-playfair)]">
                 Known Limitations
               </h2>
               <p className="mb-4">
@@ -193,7 +192,7 @@ export default function AccessibilityPage() {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-[var(--brand-navy)] mb-4">
+              <h2 className="text-2xl font-semibold text-brand-sienna-dark mb-4 font-[family-name:var(--font-playfair)]">
                 Feedback and Assistance
               </h2>
               <p className="mb-4">
@@ -206,7 +205,7 @@ export default function AccessibilityPage() {
                   <strong>Phone:</strong>{' '}
                   <a
                     href="tel:+14098665800"
-                    className="text-[var(--brand-sand-dark)] hover:underline"
+                    className="text-brand-terracotta hover:underline"
                   >
                     (409) 866-5800
                   </a>
@@ -215,7 +214,7 @@ export default function AccessibilityPage() {
                   <strong>Email:</strong>{' '}
                   <a
                     href="mailto:leasing@marbellabayapts.com"
-                    className="text-[var(--brand-sand-dark)] hover:underline"
+                    className="text-brand-terracotta hover:underline"
                   >
                     leasing@marbellabayapts.com
                   </a>
@@ -239,7 +238,7 @@ export default function AccessibilityPage() {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-[var(--brand-navy)] mb-4">
+              <h2 className="text-2xl font-semibold text-brand-sienna-dark mb-4 font-[family-name:var(--font-playfair)]">
                 Physical Accessibility
               </h2>
               <p className="mb-4">
@@ -261,7 +260,7 @@ export default function AccessibilityPage() {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-[var(--brand-navy)] mb-4">
+              <h2 className="text-2xl font-semibold text-brand-sienna-dark mb-4 font-[family-name:var(--font-playfair)]">
                 Continuous Improvement
               </h2>
               <p>
@@ -276,19 +275,19 @@ export default function AccessibilityPage() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-[var(--brand-navy)] text-white py-8">
+      <footer className="bg-brand-sienna-dark text-white py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-400 text-sm">
           <p>
             &copy; {new Date().getFullYear()} Marbella Bay Apartments. All
             rights reserved.
           </p>
           <div className="mt-4 space-x-4">
-            <Link href="/" className="hover:text-white transition-colors">
+            <Link href="/" className="hover:text-brand-saffron transition-colors">
               Home
             </Link>
             <Link
               href="/accessibility"
-              className="hover:text-white transition-colors"
+              className="hover:text-brand-saffron transition-colors"
             >
               Accessibility
             </Link>

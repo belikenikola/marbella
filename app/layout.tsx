@@ -1,11 +1,18 @@
 import type { Metadata, Viewport } from 'next';
-import { Poppins } from 'next/font/google';
+import { Playfair_Display, DM_Sans } from 'next/font/google';
 import './globals.css';
 
-const poppins = Poppins({
-  variable: '--font-poppins',
+const playfair = Playfair_Display({
+  variable: '--font-playfair',
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'],
+  weight: ['400', '600', '700', '900'],
+  display: 'swap',
+});
+
+const dmSans = DM_Sans({
+  variable: '--font-dm-sans',
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600'],
   display: 'swap',
 });
 
@@ -34,7 +41,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: '#1b2e4a',
+  themeColor: '#C0503A',
 };
 
 export default function RootLayout({
@@ -44,7 +51,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} antialiased`}>
+      <body className={`${playfair.variable} ${dmSans.variable} antialiased`}>
         <a href="#main-content" className="skip-link">
           Skip to main content
         </a>

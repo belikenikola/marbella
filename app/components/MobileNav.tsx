@@ -18,7 +18,7 @@ export default function MobileNav() {
     <div className="md:hidden">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="p-2 text-white hover:text-[var(--brand-sand)] transition-colors"
+        className="p-2 text-white hover:text-[var(--brand-saffron)] transition-colors"
         aria-expanded={isOpen}
         aria-controls="mobile-menu"
         aria-label={isOpen ? 'Close menu' : 'Open menu'}
@@ -56,7 +56,7 @@ export default function MobileNav() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className="absolute top-full left-0 right-0 bg-[var(--brand-navy)]/95 backdrop-blur-sm border-t border-white/10 overflow-hidden"
+            className="absolute top-full left-0 right-0 bg-[var(--brand-sienna-dark)]/95 backdrop-blur-sm border-t border-white/10 overflow-hidden"
             role="navigation"
             aria-label="Mobile navigation"
           >
@@ -71,7 +71,7 @@ export default function MobileNav() {
                   <Link
                     href={link.href}
                     onClick={() => setIsOpen(false)}
-                    className="block px-6 py-3 text-white hover:text-[var(--brand-sand)] hover:bg-white/5 transition-colors"
+                    className="block px-6 py-3 text-white hover:text-[var(--brand-saffron)] hover:bg-white/5 transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -85,7 +85,7 @@ export default function MobileNav() {
                 <Link
                   href="#availability"
                   onClick={() => setIsOpen(false)}
-                  className="block mx-6 mt-4 px-4 py-2 bg-[var(--brand-sand)] text-[var(--brand-navy)] text-center font-semibold rounded hover:bg-[var(--brand-sand-dark)] transition-colors"
+                  className="block mx-6 mt-4 px-4 py-2 bg-[var(--brand-terracotta)] text-white text-center font-semibold rounded-full hover:bg-[var(--brand-terracotta-dark)] transition-colors"
                 >
                   View Availability
                 </Link>

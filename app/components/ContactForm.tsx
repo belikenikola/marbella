@@ -64,7 +64,7 @@ export default function ContactForm() {
         <div>
           <label
             htmlFor="firstName"
-            className="block text-sm font-medium text-brand-navy mb-1"
+            className="block text-sm font-medium text-brand-sienna-dark mb-1"
           >
             First Name <span className="text-red-500">*</span>
           </label>
@@ -78,14 +78,14 @@ export default function ContactForm() {
             onChange={(e) =>
               setFormData({ ...formData, firstName: e.target.value })
             }
-            className="w-full px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-brand-sand focus:border-transparent outline-none transition-all"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-terracotta focus:border-transparent outline-none transition-all"
             aria-required="true"
           />
         </div>
         <div>
           <label
             htmlFor="lastName"
-            className="block text-sm font-medium text-brand-navy mb-1"
+            className="block text-sm font-medium text-brand-sienna-dark mb-1"
           >
             Last Name <span className="text-red-500">*</span>
           </label>
@@ -99,7 +99,7 @@ export default function ContactForm() {
             onChange={(e) =>
               setFormData({ ...formData, lastName: e.target.value })
             }
-            className="w-full px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-brand-sand focus:border-transparent outline-none transition-all"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-terracotta focus:border-transparent outline-none transition-all"
             aria-required="true"
           />
         </div>
@@ -108,7 +108,7 @@ export default function ContactForm() {
       <div>
         <label
           htmlFor="email"
-          className="block text-sm font-medium text-brand-navy mb-1"
+          className="block text-sm font-medium text-brand-sienna-dark mb-1"
         >
           Email <span className="text-red-500">*</span>
         </label>
@@ -120,7 +120,7 @@ export default function ContactForm() {
           autoComplete="email"
           value={formData.email}
           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-          className="w-full px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-brand-sand focus:border-transparent outline-none transition-all"
+          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-terracotta focus:border-transparent outline-none transition-all"
           aria-required="true"
         />
       </div>
@@ -128,7 +128,7 @@ export default function ContactForm() {
       <div>
         <label
           htmlFor="phone"
-          className="block text-sm font-medium text-brand-navy mb-1"
+          className="block text-sm font-medium text-brand-sienna-dark mb-1"
         >
           Phone
         </label>
@@ -139,14 +139,14 @@ export default function ContactForm() {
           autoComplete="tel"
           value={formData.phone}
           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-          className="w-full px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-brand-sand focus:border-transparent outline-none transition-all"
+          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-terracotta focus:border-transparent outline-none transition-all"
         />
       </div>
 
       <div>
         <label
           htmlFor="message"
-          className="block text-sm font-medium text-brand-navy mb-1"
+          className="block text-sm font-medium text-brand-sienna-dark mb-1"
         >
           Message <span className="text-red-500">*</span>
         </label>
@@ -159,14 +159,14 @@ export default function ContactForm() {
           onChange={(e) =>
             setFormData({ ...formData, message: e.target.value })
           }
-          className="w-full px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-brand-sand focus:border-transparent outline-none transition-all resize-none"
+          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-terracotta focus:border-transparent outline-none transition-all resize-none"
           aria-required="true"
         />
       </div>
 
       {error && (
         <div
-          className="p-3 bg-red-50 border border-red-200 text-red-700 rounded"
+          className="p-3 bg-red-50 border border-red-200 text-red-700 rounded-lg"
           role="alert"
           aria-live="assertive"
           aria-atomic="true"
@@ -177,7 +177,7 @@ export default function ContactForm() {
 
       {success && (
         <div
-          className="p-3 bg-green-50 border border-green-200 text-green-700 rounded"
+          className="p-3 bg-green-50 border border-green-200 text-green-700 rounded-lg"
           role="status"
           aria-live="polite"
           aria-atomic="true"
@@ -189,7 +189,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={isLoading}
-        className="w-full px-6 py-3 bg-brand-sand text-brand-navy font-semibold rounded hover:bg-brand-sand-dark transition-all hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+        className="w-full px-6 py-3 bg-brand-terracotta text-white font-semibold rounded-full hover:bg-brand-terracotta-dark transition-all hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
       >
         {isLoading ? <LoadingSpinner /> : 'Send Message'}
       </button>
