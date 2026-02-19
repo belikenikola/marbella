@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+:root {
+  /* Marbella Bay Brand Colors - warm coastal palette */
+  --brand-navy: #1b2e4a;
+  --brand-sand: #c9a96e;
+  --brand-sand-light: #d4bc8e;
+  --brand-sand-dark: #b08d4f;
+  --brand-gray-light: #f7f5f2;
+  --brand-gray: #6b7280;
+  --brand-white: #ffffff;
+  --brand-warm-white: #fdfbf7;
+
+  /* Semantic Colors */
+  --background: #ffffff;
+  --foreground: #1b2e4a;
+  --text-primary: #1b2e4a;
+  --text-secondary: #6b7280;
+  --accent: #c9a96e;
+  --accent-hover: #b08d4f;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-brand-navy: var(--brand-navy);
+  --color-brand-sand: var(--brand-sand);
+  --color-brand-sand-light: var(--brand-sand-light);
+  --color-brand-sand-dark: var(--brand-sand-dark);
+  --color-brand-gray-light: var(--brand-gray-light);
+  --color-brand-gray: var(--brand-gray);
+  --color-brand-warm-white: var(--brand-warm-white);
+  --font-sans: var(--font-poppins);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-poppins), Arial, Helvetica, sans-serif;
+}
+
+/* Hero Section Styles */
+.hero-title {
+  letter-spacing: 0.05em;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.hero-subtitle-spread {
+  letter-spacing: 0.35em;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Text Shadow Utilities */
+.text-shadow-sm {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.text-shadow-lg {
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Hide scrollbar for carousel */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Decorative line accent */
+.accent-line {
+  width: 60px;
+  height: 3px;
+  background: var(--brand-sand);
+}
+
+.accent-line-center {
+  width: 60px;
+  height: 3px;
+  background: var(--brand-sand);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Focus styles for accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--brand-sand);
+  outline-offset: 2px;
+}
+
+/* Skip to content link for accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--brand-navy);
+  color: white;
+  padding: 8px 16px;
+  z-index: 100;
+  transition: top 0.3s;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
