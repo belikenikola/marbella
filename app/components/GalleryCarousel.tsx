@@ -89,7 +89,7 @@ export default function GalleryCarousel({ images }: GalleryCarouselProps) {
                 className="w-full h-auto object-cover group-hover:scale-[1.03] transition-transform duration-500"
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
-              <div className="absolute inset-0 bg-brand-terracotta/0 group-hover:bg-brand-terracotta/20 transition-colors duration-300 flex items-center justify-center">
+              <div className="absolute inset-0 bg-brand-blue/0 group-hover:bg-brand-blue/20 transition-colors duration-300 flex items-center justify-center">
                 <svg
                   className="w-10 h-10 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                   fill="none"

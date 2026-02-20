@@ -1,18 +1,11 @@
 import type { Metadata, Viewport } from 'next';
-import { Playfair_Display, DM_Sans } from 'next/font/google';
+import { Poppins } from 'next/font/google';
 import './globals.css';
 
-const playfair = Playfair_Display({
-  variable: '--font-playfair',
+const poppins = Poppins({
+  variable: '--font-poppins',
   subsets: ['latin'],
-  weight: ['400', '600', '700', '900'],
-  display: 'swap',
-});
-
-const dmSans = DM_Sans({
-  variable: '--font-dm-sans',
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600'],
+  weight: ['300', '400', '500', '600', '700'],
   display: 'swap',
 });
 
@@ -27,6 +20,9 @@ export const metadata: Metadata = {
     'Sienna Trails apartments',
     'Beaumont TX rentals',
   ],
+  icons: {
+    icon: '/favicon.svg',
+  },
   openGraph: {
     title: 'Marbella Bay Apartments | Beaumont, TX',
     description:
@@ -41,7 +37,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: '#C0503A',
+  themeColor: '#242424',
 };
 
 export default function RootLayout({
@@ -51,7 +47,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${playfair.variable} ${dmSans.variable} antialiased`}>
+      <body className={`${poppins.variable} antialiased`}>
         <a href="#main-content" className="skip-link">
           Skip to main content
         </a>
