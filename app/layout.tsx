@@ -10,6 +10,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.marbellabayapts.com'),
   title: 'Marbella Bay Apartments | Beaumont, TX',
   description:
     'Marbella Bay Apartments offers 176 modern apartments in Beaumont, TX. Featuring resort-style amenities, a modern clubhouse, fitness center, and a prime location near shopping and dining.',

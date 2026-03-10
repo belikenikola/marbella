@@ -808,6 +808,12 @@ export default function Home() {
               <h4 className="font-semibold mb-4">Legal</h4>
               <nav className="space-y-2" aria-label="Legal navigation">
                 <Link
+                  href="/privacy"
+                  className="block text-gray-400 hover:text-white transition-colors"
+                >
+                  Privacy Policy
+                </Link>
+                <Link
                   href="/accessibility"
                   className="block text-gray-400 hover:text-white transition-colors"
                 >

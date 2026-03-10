@@ -41,7 +41,7 @@ export default function AccessibilityPage() {
           </h1>
 
           <p className="text-brand-gray mb-6">
-            <strong>Last Updated:</strong> February 2025
+            <strong>Last Updated:</strong> March 2026
           </p>
 
           <div className="prose prose-lg max-w-none text-brand-gray">
@@ -289,6 +289,12 @@ export default function AccessibilityPage() {
           <div className="mt-4 space-x-4">
             <Link href="/" className="hover:text-white transition-colors">
               Home
+            </Link>
+            <Link
+              href="/privacy"
+              className="hover:text-white transition-colors"
+            >
+              Privacy Policy
             </Link>
             <Link
               href="/accessibility"
