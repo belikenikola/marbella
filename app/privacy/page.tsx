@@ -55,7 +55,7 @@ export default function PrivacyPage() {
                 protecting the personal information you share with us. This
                 Privacy Policy explains how we collect, use, and safeguard your
                 information when you visit our website at
-                www.marbellabayapts.com.
+                www.marbellabayapartments.com.
               </p>
               <p>
                 By using our website, you agree to the collection and use of
@@ -245,10 +245,10 @@ export default function PrivacyPage() {
                 <li>
                   <strong>Email:</strong>{' '}
                   <a
-                    href="mailto:leasing@marbellabayapts.com"
+                    href="mailto:marbellaleasing@mjspropertygroup.com"
                     className="text-brand-blue hover:underline"
                   >
-                    leasing@marbellabayapts.com
+                    marbellaleasing@mjspropertygroup.com
                   </a>
                 </li>
                 <li>

@@ -48,9 +48,9 @@ export async function POST(request: NextRequest) {
 
     // Send email using Resend
     const { error } = await resend.emails.send({
-      from: 'Marbella Bay Apartments <no-reply@marbellabayapts.com>',
+      from: 'Marbella Bay Apartments <no-reply@mjspropertygroup.com>',
       to: [
-        process.env.CONTACT_EMAIL || 'leasing@marbellabayapts.com',
+        process.env.CONTACT_EMAIL || 'leasing@mjspropertygroup.com',
       ],
       replyTo: email,
       subject: `New Contact Form Submission from ${firstName} ${lastName}`,

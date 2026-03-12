@@ -218,10 +218,10 @@ export default function AccessibilityPage() {
                 <li>
                   <strong>Email:</strong>{' '}
                   <a
-                    href="mailto:leasing@marbellabayapts.com"
+                    href="mailto:marbellaleasing@mjspropertygroup.com"
                     className="text-brand-blue hover:underline"
                   >
-                    leasing@marbellabayapts.com
+                    marbellaleasing@mjspropertygroup.com
                   </a>
                 </li>
                 <li>

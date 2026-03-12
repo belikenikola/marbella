@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next';
 
-const BASE_URL = 'https://www.marbellabayapts.com';
+const BASE_URL = 'https://www.marbellabayapartments.com/';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [

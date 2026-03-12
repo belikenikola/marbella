@@ -698,10 +698,10 @@ export default function Home() {
                         Email
                       </h4>
                       <a
-                        href="mailto:leasing@marbellabayapts.com"
+                        href="mailto:marbellaleasing@mjspropertygroup.com"
                         className="text-white/80 hover:text-brand-blue-light transition-colors"
                       >
-                        leasing@marbellabayapts.com
+                        marbellaleasing@mjspropertygroup.com
                       </a>
                     </div>
 
