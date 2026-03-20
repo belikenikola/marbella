@@ -841,6 +841,19 @@ export default function Home() {
               disability.
             </p>
           </div>
+
+          <div className="border-t border-gray-700 mt-6 pt-6 flex items-center justify-center gap-2 text-gray-400 text-xs">
+            <span>Managed by</span>
+            <a href="#" target="_blank" rel="noopener noreferrer" className="inline-flex items-center hover:opacity-80 transition-opacity">
+              <Image
+                src="/images/mjs-logo-white.png"
+                alt="MJS Property Group"
+                width={120}
+                height={36}
+                className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity"
+              />
+            </a>
+          </div>
         </div>
       </footer>
     </>
