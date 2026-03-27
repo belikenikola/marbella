@@ -288,7 +288,7 @@ export default function AccessibilityPage() {
               alt="Equal Housing Opportunity"
               width={48}
               height={48}
-              className="w-auto opacity-60"
+              className="h-auto w-auto opacity-60"
             />
             <p>
               &copy; {new Date().getFullYear()} Marbella Bay Apartments. All
