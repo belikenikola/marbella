@@ -282,11 +282,20 @@ export default function AccessibilityPage() {
       {/* Footer */}
       <footer className="bg-brand-dark text-white py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-400 text-sm">
-          <p>
-            &copy; {new Date().getFullYear()} Marbella Bay Apartments. All
-            rights reserved.
-          </p>
-          <div className="mt-4 space-x-4">
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <Image
+              src="/images/equal-housing-opportunity.webp"
+              alt="Equal Housing Opportunity"
+              width={48}
+              height={48}
+              className="w-auto opacity-60"
+            />
+            <p>
+              &copy; {new Date().getFullYear()} Marbella Bay Apartments. All
+              rights reserved.
+            </p>
+          </div>
+          <div className="space-x-4">
             <Link href="/" className="hover:text-white transition-colors">
               Home
             </Link>

@@ -831,11 +831,20 @@ export default function Home() {
           </div>
 
           <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400 text-sm">
+            <div className="flex items-center justify-center gap-3 mb-3">
+              <Image
+                src="/images/equal-housing-opportunity.webp"
+                alt="Equal Housing Opportunity"
+                width={48}
+                height={48}
+                className="w-auto opacity-60"
+              />
+              <p>
+                &copy; {new Date().getFullYear()} Marbella Bay Apartments. All
+                rights reserved.
+              </p>
+            </div>
             <p>
-              &copy; {new Date().getFullYear()} Marbella Bay Apartments. All
-              rights reserved.
-            </p>
-            <p className="mt-2">
               Equal Housing Opportunity. We do not discriminate on the basis of
               race, color, religion, national origin, sex, familial status, or
               disability.
